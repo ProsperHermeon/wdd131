@@ -28,6 +28,7 @@ header {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 /* Navigation */
@@ -60,7 +61,7 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
-  align-items: start;
+  align-items: stretch;
 }
 
 h1 {
@@ -102,6 +103,7 @@ h1 {
   gap: 1.25rem;
   margin-bottom: 2rem;
   align-items: flex-start;
+  flex-direction: row-reverse;
 }
 
 .profile-img {
@@ -169,12 +171,15 @@ h1 {
 /* Resources Card */
 .resources {
   grid-column: 2;
+  display: flex;
+  flex-direction: column;
 }
 
 .resources ul {
   list-style: none;
   padding: 1.5rem;
   margin: 0;
+  flex: 1;
 }
 
 .resources li {
