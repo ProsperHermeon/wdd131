@@ -1,5 +1,5 @@
-/* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 /* Reset */
 * {
@@ -8,11 +8,11 @@
   box-sizing: border-box;
 }
 
-/* Global */
+/* Global Styles */
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: #f5f7fa;
-  color: #333;
+  font-family: 'Inter', sans-serif;
+  background-color: #f5f5f5;
+  color: #2d3748;
   line-height: 1.6;
 }
 
@@ -20,96 +20,222 @@ body {
 header {
   background-color: #1e3a8a;
   color: white;
-  text-align: center;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
 }
 
 #course-title {
   display: block;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 /* Navigation */
 nav {
   display: flex;
   justify-content: center;
-  gap: 2rem;
-  margin-top: .5rem;
+  gap: 2.5rem;
+  flex-wrap: wrap;
 }
 
 nav a {
   color: #e2e8f0;
   text-decoration: none;
   font-weight: 500;
-  padding: .4rem .8rem;
-  transition: all .3s ease;
-}
-
-nav a:hover {
-  background: white;
-  color: #1e3a8a;
+  padding: 0.5rem 1rem;
+  transition: color 0.2s ease, background-color 0.2s ease;
   border-radius: 4px;
 }
 
-/* Main layout */
+nav a:hover {
+  color: #1e3a8a;
+  background-color: white;
+}
+
+/* Main Layout - CSS Grid for side-by-side cards */
 main {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 2rem auto;
-  padding: 1rem;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
 }
 
 h1 {
+  grid-column: 1 / -1;
   color: #1e3a8a;
   text-align: center;
-  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
 }
 
 /* Cards */
 .card {
   background: white;
-  margin-bottom: 1.5rem;
-  padding: 1.2rem;
-  border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,.12);
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 1rem;
-  align-items: center;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .card h2 {
-  grid-column: 1 / -1;
-  color: #1e3a8a;
-  margin-bottom: .5rem;
+  background-color: #1e3a8a;
+  color: white;
+  padding: 1rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
 }
 
-.card img {
-  width: 100%;
-  border-radius: 10px;
-  max-height: 240px;
+.card-content {
+  padding: 1.5rem;
+}
+
+/* About Me Card Content */
+.intro-section {
+  display: flex;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+  align-items: flex-start;
+}
+
+.profile-img {
+  width: 130px;
+  height: 130px;
   object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+  border: 2px solid #e5e7eb;
 }
 
-/* Resource list card */
+.intro-section p {
+  flex: 1;
+  margin: 0;
+  line-height: 1.7;
+}
+
+.location-section {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 1.5rem;
+}
+
+.location-section h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.location-info {
+  display: flex;
+  gap: 1.25rem;
+  align-items: flex-start;
+}
+
+.flag-wrapper {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flag-img {
+  width: 160px;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.flag-label {
+  font-size: 0.9rem;
+  color: #4b5563;
+  text-align: center;
+  margin: 0;
+}
+
+.location-info > p {
+  flex: 1;
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* Resources Card */
+.resources {
+  grid-column: 2;
+}
+
 .resources ul {
-  padding-left: 1.5rem;
+  list-style: none;
+  padding: 1.5rem;
+  margin: 0;
 }
 
 .resources li {
-  margin: .4rem 0;
+  margin-bottom: 0.75rem;
+}
+
+.resources li:last-child {
+  margin-bottom: 0;
+}
+
+.resources a {
+  color: #2563eb;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.resources a:hover {
+  color: #1e40af;
 }
 
 /* Footer */
 footer {
-  text-align: center;
-  background: #1e3a8a;
+  background-color: #1e3a8a;
   color: white;
-  padding: 1.2rem;
-  margin-top: 2rem;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 3rem;
+}
+
+footer p {
+  margin: 0.25rem 0;
 }
 
 #lastModified {
-  font-size: .9rem;
-  opacity: .8;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+  
+  .resources {
+    grid-column: 1;
+  }
+  
+  nav {
+    gap: 1rem;
+  }
+  
+  .intro-section,
+  .location-info {
+    flex-direction: column;
+  }
+  
+  .profile-img,
+  .flag-img {
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
 }
