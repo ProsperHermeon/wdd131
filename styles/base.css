@@ -1,6 +1,3 @@
-/* Google Fonts - Premium Typography */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
-
 /* Reset */
 * {
   margin: 0;
@@ -8,19 +5,19 @@
   box-sizing: border-box;
 }
 
-/* Color Palette Variables */
+/* Color Palette Variables - WCAG AA Compliant */
 :root {
   --lightest: #F7F5F3;
   --light: #E8E6E3;
-  --medium: #8B7D6B;
+  --medium: #5A4D3F;
   --dark: #4A4A47;
   --darkest: #1A1A18;
-  --accent: #C9B99B;
+  --accent: #8B7355;
 }
 
 /* Global Styles */
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   background: linear-gradient(135deg, var(--lightest) 0%, #FAF9F7 100%);
   color: var(--darkest);
   line-height: 1.7;
@@ -49,7 +46,6 @@ header::after {
 
 #course-title {
   display: block;
-  font-family: 'Space Grotesk', sans-serif;
   font-size: 1.35rem;
   font-weight: 600;
   margin-bottom: 1.25rem;
@@ -72,7 +68,7 @@ nav a {
   font-weight: 500;
   font-size: 0.95rem;
   padding: 0.6rem 1.2rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 0.2s ease, background-color 0.2s ease;
   border-radius: 6px;
   letter-spacing: 0.01em;
   position: relative;
@@ -86,7 +82,7 @@ nav a::before {
   width: 0;
   height: 2px;
   background: var(--accent);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: width 0.3s ease;
   transform: translateX(-50%);
 }
 
@@ -112,17 +108,12 @@ main {
 
 h1 {
   grid-column: 1 / -1;
-  font-family: 'Space Grotesk', sans-serif;
   color: var(--darkest);
   text-align: center;
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 3rem;
   letter-spacing: -0.03em;
-  background: linear-gradient(135deg, var(--darkest) 0%, var(--medium) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
 }
 
 /* Cards - Premium Glass Effect */
@@ -139,12 +130,11 @@ h1 {
   display: flex;
   flex-direction: column;
   border: 1px solid rgba(255, 255, 255, 0.5);
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
-              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
   box-shadow: 
     0 12px 48px rgba(26, 26, 24, 0.12),
     0 4px 12px rgba(26, 26, 24, 0.06),
@@ -155,14 +145,12 @@ h1 {
   background: linear-gradient(135deg, var(--darkest) 0%, var(--dark) 100%);
   color: var(--lightest);
   padding: 1.5rem 1rem;
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 1.15rem;
+  font-size: 0.9rem;
   font-weight: 600;
   text-align: center;
   margin: 0;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  font-size: 0.9rem;
 }
 
 .card-content {
@@ -184,7 +172,7 @@ h1 {
   object-fit: cover;
   border-radius: 12px;
   flex-shrink: 0;
-  border: 2px solid rgba(201, 185, 155, 0.3);
+  border: 2px solid rgba(139, 115, 85, 0.3);
   box-shadow: 0 4px 16px rgba(26, 26, 24, 0.1);
   transition: transform 0.3s ease;
 }
@@ -209,7 +197,6 @@ h1 {
 }
 
 .location-section h3 {
-  font-family: 'Space Grotesk', sans-serif;
   font-size: 1.3rem;
   font-weight: 600;
   color: var(--darkest);
@@ -242,7 +229,7 @@ h1 {
 
 .flag-label {
   font-size: 0.85rem;
-  color: var(--medium);
+  color: var(--dark);
   text-align: center;
   margin: 0;
   font-weight: 500;
@@ -299,14 +286,14 @@ h1 {
   text-decoration: none;
   font-weight: 500;
   font-size: 0.95rem;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 0.3s ease, border-bottom-color 0.3s ease, padding-left 0.3s ease;
   border-bottom: 1px solid transparent;
   padding-bottom: 2px;
   letter-spacing: 0.01em;
 }
 
 .resources a:hover {
-  color: var(--medium);
+  color: var(--dark);
   border-bottom-color: var(--accent);
   padding-left: 4px;
 }
@@ -315,7 +302,7 @@ h1 {
   transform: translateX(4px);
 }
 
-/* Footer - very Sleek Dark Bar */
+/* Footer - Sleek Dark Bar */
 footer {
   background: var(--darkest);
   color: var(--light);
