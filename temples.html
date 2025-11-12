@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Temple Album | WDD 131</title>
+  
+  <meta name="description" content="Temple Album - A collection of beautiful temple photographs" />
+  <meta name="author" content="Prosper Opara" />
+  
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+  <!-- Google Fonts Stylesheet -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" />
+  
+  <!-- CSS Files - Mobile First -->
+  <link rel="stylesheet" href="styles/temples.css" />
+  <link rel="stylesheet" href="styles/temples-large.css" />
+  
+  <!-- JavaScript -->
+  <script src="scripts/temples.js" defer></script>
+</head>
+<body>
+  <header>
+    <span class="site-title">Temple Album</span>
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <nav id="nav-menu">
+      <a href="temples.html">Home</a>
+      <a href="#old">Old</a>
+      <a href="#new">New</a>
+      <a href="#large">Large</a>
+      <a href="#small">Small</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Home</h1>
+    <div class="gallery">
+      <figure>
+        <img src="images/temple1.jpg" alt="Beautiful temple architecture with stunning spires" loading="lazy" />
+        <figcaption>Majestic Temple View</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple2.jpg" alt="Serene temple grounds with peaceful surroundings" loading="lazy" />
+        <figcaption>Peaceful Temple Grounds</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple3.jpg" alt="Magnificent temple facade in golden hour light" loading="lazy" />
+        <figcaption>Golden Hour Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple4.jpg" alt="Elegant temple architecture against blue sky" loading="lazy" />
+        <figcaption>Skyward Temple Spires</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple5.jpg" alt="Breathtaking temple view with lush gardens" loading="lazy" />
+        <figcaption>Garden Temple Vista</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple6.jpg" alt="Stunning temple exterior with architectural details" loading="lazy" />
+        <figcaption>Architectural Masterpiece</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple7.jpg" alt="Inspiring temple view with natural beauty" loading="lazy" />
+        <figcaption>Natural Beauty Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple8.jpg" alt="Captivating temple scene with perfect lighting" loading="lazy" />
+        <figcaption>Perfect Light Temple</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple9.jpg" alt="Awe-inspiring temple panorama" loading="lazy" />
+        <figcaption>Temple Panorama View</figcaption>
+      </figure>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Prosper Opara | Nigeria</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
+

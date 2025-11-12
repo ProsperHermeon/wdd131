@@ -1,0 +1,217 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Color Palette Variables - WCAG AA Compliant */
+:root {
+  --primary-purple: #6B46C1;
+  --dark-purple: #553C9A;
+  --light-purple: #8B5CF6;
+  --lightest: #F7F5F3;
+  --light: #E8E6E3;
+  --dark: #4A4A47;
+  --darkest: #1A1A18;
+  --white: #FFFFFF;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background-color: var(--white);
+  color: var(--darkest);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header - Purple Bar */
+header {
+  background-color: var(--primary-purple);
+  color: var(--white);
+  padding: 1.5rem 1rem;
+  position: relative;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: left;
+  margin: 0;
+  color: var(--white);
+  display: block;
+  flex: 1;
+}
+
+/* Hamburger Button - Mobile Only - Always Visible on Mobile */
+.hamburger {
+  display: flex;
+  position: relative;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  width: 30px;
+  height: 24px;
+  padding: 0;
+  z-index: 1001;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hamburger span {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: var(--white);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(7px, 7px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+  width: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Navigation - Mobile First - Hidden by Default */
+nav {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--primary-purple);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+nav.active {
+  display: flex;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+nav a:last-child {
+  border-bottom: none;
+}
+
+nav a:hover {
+  background-color: var(--dark-purple);
+  color: var(--white);
+}
+
+/* Main Content */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+main h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--darkest);
+}
+
+/* Gallery Grid - Mobile: 1 Column */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Figure Elements */
+figure {
+  margin: 0;
+  padding: 0;
+  background-color: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+figure:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+}
+
+figcaption {
+  text-align: center;
+  padding: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--darkest);
+  background-color: var(--white);
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-purple);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  color: var(--white);
+}
+
+#lastModified {
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection Styling */
+::selection {
+  background-color: var(--light-purple);
+  color: var(--white);
+}
+
