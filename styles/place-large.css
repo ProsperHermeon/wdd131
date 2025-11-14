@@ -1,0 +1,102 @@
+/* Large View Styles - Media Query for screens wider than 768px */
+
+@media (min-width: 769px) {
+  /* Header */
+  header {
+    padding: 3rem 2rem;
+  }
+
+  header h1 {
+    font-size: 3.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.3rem;
+  }
+
+  /* Main Content */
+  main {
+    padding: 3rem 2rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  /* Hero Section - Full Width */
+  .hero {
+    grid-column: 1 / -1;
+    margin-bottom: 0;
+  }
+
+  .hero img {
+    min-height: 400px;
+  }
+
+  /* Data Section */
+  .data {
+    margin-bottom: 0;
+  }
+
+  .data h2 {
+    font-size: 2rem;
+  }
+
+  .data-content {
+    gap: 1rem;
+  }
+
+  .data-content p {
+    font-size: 1.05rem;
+  }
+
+  /* Weather Section */
+  .weather {
+    margin-bottom: 0;
+  }
+
+  .weather h2 {
+    font-size: 2rem;
+  }
+
+  /* Hide SVG icon in large view */
+  .weather-icon-mobile {
+    display: none;
+  }
+
+  /* Weather heading with emoticon pseudo-element (wider view only) */
+  .weather h2::after {
+    content: '⛅';
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+  }
+
+  .weather-info {
+    gap: 1rem;
+  }
+
+  .weather-info p {
+    font-size: 1.05rem;
+  }
+
+  /* Footer */
+  footer {
+    padding: 2.5rem 2rem;
+  }
+}
+
+/* Extra Large View */
+@media (min-width: 1024px) {
+  main {
+    gap: 2.5rem;
+  }
+
+  header h1 {
+    font-size: 4rem;
+  }
+
+  .hero img {
+    min-height: 500px;
+  }
+}
+

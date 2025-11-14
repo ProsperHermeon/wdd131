@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nigeria - The Giant of Africa | WDD 131</title>
+  
+  <meta name="description" content="Discover Nigeria, Africa's most populous country and largest economy. Explore Abuja, the capital city, its culture, landmarks, and weather." />
+  <meta name="author" content="Prosper Opara" />
+  
+  <!-- Google Fonts Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  
+  <!-- Google Fonts Stylesheet -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" />
+  
+  <!-- CSS Files - Mobile First -->
+  <link rel="stylesheet" href="styles/place.css" />
+  <link rel="stylesheet" href="styles/place-large.css" />
+  
+  <!-- JavaScript -->
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Nigeria</h1>
+    <p class="subtitle">The Giant of Africa</p>
+  </header>
+
+  <main>
+    <!-- Hero Section with Responsive Images -->
+    <section class="hero">
+      <picture>
+        <source 
+          media="(min-width: 1024px)" 
+          srcset="images/hero-large.webp" 
+          type="image/webp" />
+        <source 
+          media="(min-width: 768px)" 
+          srcset="images/hero-medium.webp" 
+          type="image/webp" />
+        <img 
+          src="images/hero-small.webp" 
+          srcset="images/hero-small.webp 320w, images/hero-medium.webp 768w, images/hero-large.webp 1024w"
+          sizes="100vw"
+          alt="Beautiful landscape of Nigeria showing modern architecture and natural beauty" 
+          loading="eager" />
+      </picture>
+    </section>
+
+    <!-- Data Section -->
+    <section class="data">
+      <h2>Data</h2>
+      <div class="data-content">
+        <p><strong>Population:</strong> 223,804,632</p>
+        <p><strong>Capital:</strong> Abuja</p>
+        <p><strong>Official Language:</strong> English</p>
+        <p><strong>Currency:</strong> Nigerian Naira (₦)</p>
+        <p><strong>Area:</strong> 923,768 km²</p>
+        <p><strong>Independence:</strong> October 1, 1960</p>
+      </div>
+    </section>
+
+    <!-- Weather Section -->
+    <section class="weather">
+      <h2>Weather</h2>
+      <div class="weather-content">
+        <div class="weather-icon-mobile">
+          <img src="images/weather.svg" alt="Weather icon" />
+        </div>
+        <div class="weather-info">
+          <p><strong>Temperature:</strong> <span id="temperature">28</span>°C</p>
+          <p><strong>Wind Speed:</strong> <span id="windSpeed">12</span> km/h</p>
+          <p><strong>Wind Chill:</strong> <span id="windChill">N/A</span></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Prosper Opara | Nigeria</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
+
