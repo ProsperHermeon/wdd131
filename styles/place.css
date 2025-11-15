@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* CSS Variables - South Africa Flag Colors (Red, Blue, Green, Yellow, Black, White) - WCAG AA Compliant */
+/* CSS Variables - South Africa Flag Colors - All Hex Format - WCAG AA Compliant */
 :root {
   --primary-green: #006B3C;
   --secondary-green: #005A2B;
@@ -18,8 +18,9 @@
   --dark-gray: #212529;
   --text-dark: #1A1A1A;
   --text-light: #495057;
-  --shadow: #0000001A;
-  --shadow-hover: #00000026;
+  --black: #000000;
+  --shadow-light: #0000001A;
+  --shadow-medium: #00000026;
 }
 
 /* Global Styles */
@@ -38,7 +39,7 @@ header {
   color: var(--white);
   padding: 2rem 1.5rem;
   text-align: center;
-  box-shadow: 0 4px 12px var(--shadow);
+  box-shadow: 0 4px 12px var(--shadow-light);
 }
 
 header h1 {
@@ -69,7 +70,7 @@ main {
   margin-bottom: 2rem;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 16px var(--shadow);
+  box-shadow: 0 4px 16px var(--shadow-light);
 }
 
 .hero picture,
@@ -91,7 +92,7 @@ main {
   padding: 1.5rem;
   border-radius: 12px;
   margin-bottom: 2rem;
-  box-shadow: 0 2px 8px var(--shadow);
+  box-shadow: 0 2px 8px var(--shadow-light);
 }
 
 .data h2 {
@@ -128,7 +129,7 @@ main {
   background-color: var(--light-gray);
   padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 2px 8px var(--shadow);
+  box-shadow: 0 2px 8px var(--shadow-light);
 }
 
 .weather h2 {
@@ -189,7 +190,7 @@ footer {
   text-align: center;
   padding: 2rem 1.5rem;
   margin-top: 3rem;
-  box-shadow: 0 -4px 12px var(--shadow);
+  box-shadow: 0 -4px 12px var(--shadow-light);
 }
 
 footer p {
