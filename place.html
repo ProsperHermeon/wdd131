@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nigeria - The Giant of Africa | WDD 131</title>
+  <title>Cape Town, South Africa - My Dream Vacation Destination | WDD 131</title>
   
-  <meta name="description" content="Discover Nigeria, Africa's most populous country and largest economy. Explore Abuja, the capital city, its culture, landmarks, and weather." />
+  <meta name="description" content="Discover Cape Town, South Africa - a stunning coastal city known for Table Mountain, beautiful beaches, rich culture, and amazing weather. My dream vacation destination." />
   <meta name="author" content="Prosper Opara" />
   
   <!-- Google Fonts Preconnect -->
@@ -24,8 +24,8 @@
 </head>
 <body>
   <header>
-    <h1>Nigeria</h1>
-    <p class="subtitle">The Giant of Africa</p>
+    <h1>Cape Town</h1>
+    <p class="subtitle">South Africa</p>
   </header>
 
   <main>
@@ -33,19 +33,17 @@
     <section class="hero">
       <picture>
         <source 
-          media="(min-width: 1024px)" 
+          media="(min-width: 769px)" 
           srcset="images/hero-large.webp" 
-          type="image/webp" />
-        <source 
-          media="(min-width: 768px)" 
-          srcset="images/hero-medium.webp" 
           type="image/webp" />
         <img 
           src="images/hero-small.webp" 
-          srcset="images/hero-small.webp 320w, images/hero-medium.webp 768w, images/hero-large.webp 1024w"
+          srcset="images/hero-small.webp 320w, images/hero-large.webp 769w"
           sizes="100vw"
-          alt="Beautiful landscape of Nigeria showing modern architecture and natural beauty" 
-          loading="eager" />
+          alt="Stunning view of Cape Town, South Africa showing Table Mountain, beautiful coastline, and modern cityscape" 
+          loading="eager"
+          width="1200"
+          height="600" />
       </picture>
     </section>
 
@@ -53,12 +51,12 @@
     <section class="data">
       <h2>Data</h2>
       <div class="data-content">
-        <p><strong>Population:</strong> 223,804,632</p>
-        <p><strong>Capital:</strong> Abuja</p>
-        <p><strong>Official Language:</strong> English</p>
-        <p><strong>Currency:</strong> Nigerian Naira (₦)</p>
-        <p><strong>Area:</strong> 923,768 km²</p>
-        <p><strong>Independence:</strong> October 1, 1960</p>
+        <p><strong>Population:</strong> 4,618,000</p>
+        <p><strong>Province:</strong> Western Cape</p>
+        <p><strong>Official Language:</strong> English, Afrikaans, Xhosa</p>
+        <p><strong>Currency:</strong> South African Rand (ZAR)</p>
+        <p><strong>Area:</strong> 2,461 km²</p>
+        <p><strong>Founded:</strong> 1652</p>
       </div>
     </section>
 
@@ -67,7 +65,7 @@
       <h2>Weather</h2>
       <div class="weather-content">
         <div class="weather-icon-mobile">
-          <img src="images/weather.svg" alt="Weather icon" />
+          <img src="images/weather.svg" alt="Weather icon showing sunny conditions" width="80" height="80" />
         </div>
         <div class="weather-info">
           <p><strong>Temperature:</strong> <span id="temperature">28</span>°C</p>
@@ -84,4 +82,3 @@
   </footer>
 </body>
 </html>
-

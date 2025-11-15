@@ -5,16 +5,19 @@
   box-sizing: border-box;
 }
 
-/* CSS Variables - Nigeria Flag Colors (Green, White, Green) */
+/* CSS Variables - South Africa Flag Colors (Red, Blue, Green, Yellow, Black, White) - WCAG AA Compliant */
 :root {
-  --primary-green: #008751;
-  --secondary-green: #006400;
+  --primary-green: #006B3C;
+  --secondary-green: #005A2B;
+  --accent-blue: #002395;
+  --accent-red: #DE3831;
+  --accent-yellow: #FFB612;
   --white: #FFFFFF;
-  --light-gray: #F5F5F5;
-  --dark-gray: #333333;
+  --light-gray: #F8F9FA;
+  --medium-gray: #6C757D;
+  --dark-gray: #212529;
   --text-dark: #1A1A1A;
-  --text-light: #666666;
-  --accent: #FFD700;
+  --text-light: #495057;
   --shadow: rgba(0, 0, 0, 0.1);
   --shadow-hover: rgba(0, 0, 0, 0.15);
 }
@@ -31,7 +34,7 @@ body {
 
 /* Header */
 header {
-  background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+  background: linear-gradient(135deg, var(--accent-blue) 0%, var(--primary-green) 100%);
   color: var(--white);
   padding: 2rem 1.5rem;
   text-align: center;
@@ -50,8 +53,8 @@ header h1 {
 .subtitle {
   font-size: 1.1rem;
   font-weight: 500;
-  opacity: 0.95;
   color: var(--white);
+  opacity: 1;
 }
 
 /* Main Content */
@@ -79,7 +82,7 @@ main {
 
 .hero img {
   min-height: 250px;
-  background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+  background: linear-gradient(135deg, var(--accent-blue) 0%, var(--primary-green) 100%);
 }
 
 /* Data Section */
@@ -181,7 +184,7 @@ main {
 
 /* Footer */
 footer {
-  background: linear-gradient(135deg, var(--primary-green) 0%, var(--secondary-green) 100%);
+  background: linear-gradient(135deg, var(--accent-blue) 0%, var(--primary-green) 100%);
   color: var(--white);
   text-align: center;
   padding: 2rem 1.5rem;
@@ -197,7 +200,8 @@ footer p {
 
 #lastModified {
   font-size: 0.85rem;
-  opacity: 0.9;
+  opacity: 0.95;
+  color: var(--white);
 }
 
 /* Smooth Scrolling */
@@ -211,3 +215,14 @@ html {
   color: var(--white);
 }
 
+/* Focus Styles for Accessibility */
+*:focus {
+  outline: 2px solid var(--primary-green);
+  outline-offset: 2px;
+}
+
+button:focus,
+a:focus {
+  outline: 2px solid var(--white);
+  outline-offset: 2px;
+}
