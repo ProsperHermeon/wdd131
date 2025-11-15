@@ -18,8 +18,8 @@
   --dark-gray: #212529;
   --text-dark: #1A1A1A;
   --text-light: #495057;
-  --shadow: rgba(0, 0, 0, 0.1);
-  --shadow-hover: rgba(0, 0, 0, 0.15);
+  --shadow: #0000001A;
+  --shadow-hover: #00000026;
 }
 
 /* Global Styles */
