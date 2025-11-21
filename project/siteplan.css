@@ -1,0 +1,240 @@
+:root {
+  --atlantic-midnight: #06304f;
+  --table-bay: #1c6e8c;
+  --sunrise-amber: #f4c95d;
+  --sandstone-mist: #f9f7f2;
+  --text-primary: #14202c;
+  --text-secondary: #4b5563;
+  --accent-dark: #0b1f2d;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--sandstone-mist);
+  color: var(--text-primary);
+  line-height: 1.65;
+  padding: 0 1rem 3rem;
+}
+
+header {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3rem 0 2rem;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.4em;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+h1 {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  font-size: 3rem;
+  color: var(--atlantic-midnight);
+  margin-bottom: 0.75rem;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 720px;
+  margin: 0 auto 1.5rem;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+nav a {
+  padding: 0.55rem 1.25rem;
+  border-radius: 999px;
+  background: var(--atlantic-midnight);
+  color: var(--sandstone-mist);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  background: var(--sunrise-amber);
+  color: var(--accent-dark);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  gap: 1.75rem;
+}
+
+.card {
+  background: var(--sandstone-mist);
+  padding: 2rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 25px 45px rgba(6, 48, 79, 0.08);
+  border: 1px solid rgba(6, 48, 79, 0.08);
+}
+
+.card h2 {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  color: var(--table-bay);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  color: var(--atlantic-midnight);
+  margin-bottom: 0.35rem;
+}
+
+.card p,
+.card li {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.two-column {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-bottom: 1.25rem;
+}
+
+.logo-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: center;
+}
+
+.logo-mark {
+  width: 96px;
+  height: 96px;
+  border-radius: 24px;
+  background: var(--atlantic-midnight);
+  color: var(--sandstone-mist);
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.2em;
+}
+
+ul {
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+  display: grid;
+  gap: 0.4rem;
+}
+
+ol {
+  padding-left: 1.4rem;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+}
+
+.swatches article {
+  background: rgba(6, 48, 79, 0.03);
+  padding: 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(6, 48, 79, 0.08);
+}
+
+.swatch {
+  width: 100%;
+  height: 80px;
+  border-radius: 0.6rem;
+  background: var(--swatch, var(--atlantic-midnight));
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.4);
+  margin-bottom: 0.75rem;
+}
+
+.note {
+  margin-top: 1rem;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+.wireframes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.wireframe {
+  border: 2px dashed var(--table-bay);
+  border-radius: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  background: rgba(28, 110, 140, 0.05);
+}
+
+.wireframes figure {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.wireframe span {
+  border: 2px solid var(--table-bay);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  text-align: center;
+  font-weight: 600;
+  color: var(--table-bay);
+  background: var(--sandstone-mist);
+}
+
+.wf-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.wireframe-note {
+  margin-top: 1rem;
+  color: var(--text-secondary);
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 640px) {
+  header {
+    padding-top: 2rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+}

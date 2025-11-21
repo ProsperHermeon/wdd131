@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cape Town Explorer | Site Plan</title>
+  <meta name="description" content="Website planning document for the Cape Town Explorer travel guide project.">
+  <meta name="author" content="Prosper Opara">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="siteplan.css">
+</head>
+<body>
+  <header>
+    <p class="eyebrow">W05 Project Planning</p>
+    <h1>Cape Town Explorer</h1>
+    <p class="tagline">A modern travel companion for discovering Cape Town's culture, cuisine, and coastline.</p>
+    <nav aria-label="Plan sections">
+      <a href="#site-name">Site Name</a>
+      <a href="#purpose">Site Purpose</a>
+      <a href="#scenarios">Scenarios</a>
+      <a href="#colors">Color Schema</a>
+      <a href="#typography">Typography</a>
+      <a href="#wireframes">Wireframes</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="site-name" class="card">
+      <h2>Site Name & Domain</h2>
+      <div class="two-column">
+        <div>
+          <h3>Chosen Name</h3>
+          <p><strong>Cape Town Explorer</strong> &mdash; this name instantly communicates location and purpose. It positions the site as a curated travel companion for first-time visitors and locals exploring hidden gems.</p>
+        </div>
+        <div>
+          <h3>Optional Domain</h3>
+          <p>Availability checked: <code>capetown-explorer.com</code> (alternate: <code>capetownxplorer.com</code>)</p>
+        </div>
+      </div>
+      <figure class="logo-preview">
+        <span class="logo-mark">CT</span>
+        <figcaption>Logo direction: minimalist monogram referencing Table Mountain silhouette.</figcaption>
+      </figure>
+    </section>
+
+    <section id="purpose" class="card">
+      <h2>Site Purpose</h2>
+      <p>The Cape Town Explorer site will be a three-page responsive travel guide that helps users plan memorable itineraries. Core content pillars include:</p>
+      <ul>
+        <li><strong>Neighborhood Guides:</strong> highlight dining, culture, safety tips, and transport details.</li>
+        <li><strong>Dynamic Attractions Library:</strong> filterable by mood (heritage, outdoors, foodie) with localStorage support for "saved" favorites.</li>
+        <li><strong>Smart Planning Tools:</strong> weather snapshot, packing tips, and a booking-ready contact form for bespoke tours.</li>
+      </ul>
+      <p>The final site will satisfy all WDD 131 project specs: valid HTML/CSS, mobile-first design, lazy-loaded media, JavaScript-driven interactivity, conditional logic, array methods, template literals, and localStorage persistence.</p>
+    </section>
+
+    <section id="scenarios" class="card">
+      <h2>Target Audience & Scenarios</h2>
+      <p>Primary audience: English-speaking travelers (ages 20-45) seeking curated, trustworthy recommendations with an emphasis on culture and outdoor adventures.</p>
+      <ol>
+        <li><strong>"I only have 48 hours in Cape Town. What must-see experiences fit my schedule?"</strong></li>
+        <li><strong>"Which neighborhoods are safe for solo travelers at night and how do I get around?"</strong></li>
+        <li><strong>"Can I save my favorite attractions and revisit them later on any device?"</strong></li>
+      </ol>
+    </section>
+
+    <section id="colors" class="card">
+      <h2>Color Schema</h2>
+      <div class="swatches">
+        <article>
+          <div class="swatch" style="--swatch:#06304f;"></div>
+          <h3>Atlantic Midnight<br><small>#06304F</small></h3>
+          <p>Usage: header background, primary buttons, link states.</p>
+        </article>
+        <article>
+          <div class="swatch" style="--swatch:#F4C95D;"></div>
+          <h3>Sunrise Amber<br><small>#F4C95D</small></h3>
+          <p>Usage: accent highlights, CTA hover, iconography.</p>
+        </article>
+        <article>
+          <div class="swatch" style="--swatch:#F9F7F2;"></div>
+          <h3>Sandstone Mist<br><small>#F9F7F2</small></h3>
+          <p>Usage: page background, card surfaces, section dividers.</p>
+        </article>
+        <article>
+          <div class="swatch" style="--swatch:#1C6E8C;"></div>
+          <h3>Table Bay Teal<br><small>#1C6E8C</small></h3>
+          <p>Usage: headings, icon borders, wireframe strokes.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="typography" class="card">
+      <h2>Typography</h2>
+      <div class="two-column">
+        <div>
+          <h3>Playfair Display</h3>
+          <p>Usage: Hero heading, section titles, CTA text. Selected for a sophisticated editorial feel aligned with premium travel brands.</p>
+        </div>
+        <div>
+          <h3>Inter</h3>
+          <p>Usage: Body copy, navigation, UI labels, form inputs. Chosen for clarity, excellent legibility, and broad language support.</p>
+        </div>
+      </div>
+      <p class="note">This planning document already uses Playfair Display for headings and Inter for body text to demonstrate the typographic pairing.</p>
+    </section>
+
+    <section id="wireframes" class="card">
+      <h2>Wireframes</h2>
+      <div class="wireframes">
+        <figure>
+          <figcaption>Mobile Layout</figcaption>
+          <div class="wireframe mobile">
+            <span class="wf-hero">Hero</span>
+            <span class="wf-card">Highlights</span>
+            <span class="wf-card">Featured Routes</span>
+            <span class="wf-card">Planner CTA</span>
+          </div>
+        </figure>
+        <figure>
+          <figcaption>Desktop Layout</figcaption>
+          <div class="wireframe desktop">
+            <span class="wf-hero">Hero + CTA</span>
+            <span class="wf-grid">
+              <span>Top Spots</span>
+              <span>Weather Widget</span>
+              <span>Local Food</span>
+            </span>
+            <span class="wf-footer">Newsletter & Footer</span>
+          </div>
+        </figure>
+      </div>
+      <p class="wireframe-note">Wireframes intentionally keep content abstract to focus on hierarchy, spacing, and responsive behavior. Final mockups will refine imagery and component states.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Prosper Opara &middot; WDD 131 Capstone Planning</p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
