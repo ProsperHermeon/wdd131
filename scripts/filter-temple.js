@@ -63,23 +63,30 @@ const temples = [
     imageUrl: "images/temple9.jpg",
   },
   {
-    templeName: "Colonia Juárez Chihuahua Mexico Temple",
-    location: "Colonia Juárez, Chihuahua, Mexico",
-    dedicated: "1999-03-06",
-    area: 6800,
-    imageUrl: "images/temple4.jpg",
+    templeName: "Lima Peru Los Olivos Temple",
+    location: "Lima, Peru",
+    dedicated: "2024-01-14",
+    area: 44800,
+    imageUrl: "images/temple3.jpg",
+  },
+  {
+    templeName: "Pocatello Idaho Temple",
+    location: "Pocatello, Idaho, USA",
+    dedicated: "2021-11-07",
+    area: 6700,
+    imageUrl: "images/temple2.jpg",
   },
 ];
 
 const gallery = document.getElementById("templeGallery");
-const navButtons = document.querySelectorAll("#filter-nav a");
+const navButtons = document.querySelectorAll("nav button");
 const hamburger = document.getElementById("hamburger");
 const nav = document.getElementById("filter-nav");
 
-const renderTemples = (filteredTemples) => {
+const renderTemples = (list) => {
   gallery.innerHTML = "";
 
-  filteredTemples.forEach((temple) => {
+  list.forEach((temple) => {
     const card = document.createElement("article");
     card.className = "temple-card";
 
@@ -137,11 +144,10 @@ const applyFilter = (filter) => {
   renderTemples(filtered);
 };
 
-navButtons.forEach((link) => {
-  link.addEventListener("click", (event) => {
-    event.preventDefault();
-    setActiveButton(link);
-    applyFilter(link.dataset.filter);
+navButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    setActiveButton(button);
+    applyFilter(button.dataset.filter);
 
     if (nav.classList.contains("active")) {
       nav.classList.remove("active");
@@ -155,11 +161,10 @@ hamburger.addEventListener("click", () => {
   nav.classList.toggle("active");
 });
 
-const currentYearElement = document.getElementById("currentyear");
-const lastModifiedElement = document.getElementById("lastModified");
+const yearElement = document.getElementById("currentyear");
+const modifiedElement = document.getElementById("lastModified");
 
-currentYearElement.textContent = new Date().getFullYear();
-lastModifiedElement.textContent = `Last Modification: ${document.lastModified}`;
+yearElement.textContent = new Date().getFullYear();
+modifiedElement.textContent = `Last Modification: ${document.lastModified}`;
 
 renderTemples(temples);
-

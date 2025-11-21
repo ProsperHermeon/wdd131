@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Filtered Temple Explorer | WDD 131</title>
 
-  <meta name="description" content="Explore worldwide temples with interactive filters highlighting old, new, large, and small temples.">
+  <meta name="description" content="Explore beautiful temples worldwide and filter by age, size, and history.">
   <meta name="author" content="Prosper Opara">
 
   <!-- Google Fonts -->
@@ -24,18 +24,18 @@
       <p class="lead">Discover inspiring temples and refine the gallery with interactive filters.</p>
     </div>
 
-    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
     <nav id="filter-nav" aria-label="Temple filters">
-      <a href="#" data-filter="all" class="active">Home</a>
-      <a href="#" data-filter="old">Old</a>
-      <a href="#" data-filter="new">New</a>
-      <a href="#" data-filter="large">Large</a>
-      <a href="#" data-filter="small">Small</a>
+      <button type="button" data-filter="all" class="active">Home</button>
+      <button type="button" data-filter="old">Old</button>
+      <button type="button" data-filter="new">New</button>
+      <button type="button" data-filter="large">Large</button>
+      <button type="button" data-filter="small">Small</button>
     </nav>
   </header>
 
@@ -51,7 +51,7 @@
     </section>
 
     <section class="temple-gallery" id="templeGallery" aria-live="polite">
-      <!-- Temple cards injected here -->
+      <!-- Cards injected by JavaScript -->
     </section>
   </main>
 

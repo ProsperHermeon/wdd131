@@ -9,16 +9,8 @@
   --c5: #ffffff;
   --text-dark: #1b1b1f;
   --text-muted: #5a5a67;
-  --shadow-soft: #1118271f;
-  --shadow-strong: #1118272e;
-  --shadow-subtle: #0000001a;
-  --shadow-medium: #00000026;
-  --overlay-08: #ffffff14;
-  --overlay-12: #ffffff1f;
-  --overlay-20: #ffffff33;
-  --overlay-35: #ffffff59;
-  --overlay-90: #ffffffe6;
-  --transparent: #00000000;
+  --shadow-soft: rgba(17, 24, 39, 0.12);
+  --shadow-strong: rgba(17, 24, 39, 0.18);
 }
 
 * {
@@ -52,6 +44,7 @@ header {
 .brand {
   max-width: 960px;
   margin: 0 auto 1.5rem;
+  padding-left: 4rem;
 }
 
 .eyebrow {
@@ -71,23 +64,30 @@ header h1 {
 
 .lead {
   max-width: 720px;
-  color: var(--overlay-90);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .hamburger {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  width: 42px;
+  width: 44px;
+  height: 44px;
   position: absolute;
-  top: 2rem;
-  right: 1.5rem;
-  background: var(--transparent);
-  border: none;
+  top: 1.5rem;
+  left: 1rem;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 999px;
   cursor: pointer;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
 }
 
 .hamburger span {
+  width: 100%;
   height: 3px;
   border-radius: 999px;
   background-color: var(--c5);
@@ -110,40 +110,39 @@ nav {
   display: none;
   flex-direction: column;
   gap: 0.75rem;
-  background-color: var(--overlay-08);
+  background-color: rgba(255, 255, 255, 0.08);
   border-radius: 12px;
   padding: 1rem;
-  box-shadow: 0 15px 35px var(--shadow-subtle);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
 nav.active {
   display: flex;
 }
 
-nav a {
+nav button {
   border: none;
-  background: var(--overlay-20);
+  background: rgba(255, 255, 255, 0.2);
   color: var(--c5);
   font-weight: 600;
   font-size: 0.95rem;
   padding: 0.75rem 1.25rem;
   border-radius: 999px;
   cursor: pointer;
-  text-decoration: none;
-  text-align: center;
   transition: background 0.25s ease, transform 0.2s ease;
 }
 
-nav a:hover,
-nav a:focus-visible {
-  background: var(--overlay-35);
-  outline: none;
+nav button:hover,
+nav button:focus-visible {
+  background: rgba(255, 255, 255, 0.35);
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
 }
 
-nav a.active {
+nav button.active {
   background: var(--c5);
   color: var(--c1);
-  box-shadow: 0 5px 20px var(--shadow-medium);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
 }
 
 /* -------------------------
@@ -155,7 +154,6 @@ nav a.active {
   padding: 0 1.5rem;
 }
 
-.hero-text {
 .hero-text {
   background: var(--c5);
   border-radius: 18px;
@@ -258,7 +256,7 @@ footer p {
     justify-content: center;
   }
 
-  nav a {
+  nav button {
     flex: 1;
   }
 
@@ -276,6 +274,14 @@ footer p {
     padding: 3rem 2rem 2rem;
   }
 
+  .brand {
+    padding-left: 0;
+  }
+
+  .brand {
+    padding-left: 0;
+  }
+
   .hamburger {
     display: none;
   }
@@ -284,18 +290,18 @@ footer p {
     display: flex !important;
     max-width: 760px;
     margin: 0 auto;
-    background: var(--overlay-12);
+    background: rgba(255, 255, 255, 0.12);
   }
 
-  nav a {
-    background: var(--transparent);
-    border: 1px solid var(--overlay-20);
+  nav button {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.25);
   }
 
-  nav a.active {
+  nav button.active {
     background: var(--c5);
     color: var(--c1);
-    border-color: var(--transparent);
+    border-color: transparent;
   }
 
   .temple-gallery {
@@ -308,4 +314,3 @@ footer p {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
-
