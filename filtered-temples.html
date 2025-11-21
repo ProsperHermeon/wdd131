@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filtered Temple Explorer | WDD 131</title>
+
+  <meta name="description" content="Explore worldwide temples with interactive filters highlighting old, new, large, and small temples.">
+  <meta name="author" content="Prosper Opara">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/filter-temple.css">
+  <script src="scripts/filter-temple.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <p class="eyebrow">W04 · Temple Album Enhancement</p>
+      <h1>Filtered Temple Explorer</h1>
+      <p class="lead">Discover inspiring temples and refine the gallery with interactive filters.</p>
+    </div>
+
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="filter-nav" aria-label="Temple filters">
+      <a href="#" data-filter="all" class="active">Home</a>
+      <a href="#" data-filter="old">Old</a>
+      <a href="#" data-filter="new">New</a>
+      <a href="#" data-filter="large">Large</a>
+      <a href="#" data-filter="small">Small</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <h2>Your Curated Temple Gallery</h2>
+        <p>
+          This gallery pulls from a curated list of temples across the globe. Use the filters above to focus on
+          historical gems, modern marvels, or temples grouped by their footprints.
+        </p>
+      </div>
+    </section>
+
+    <section class="temple-gallery" id="templeGallery" aria-live="polite">
+      <!-- Temple cards injected here -->
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="currentyear"></span> Prosper Opara | Nigeria</p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
+
