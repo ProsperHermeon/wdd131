@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cape Town Explorer | Product Review</title>
+  <meta name="description" content="Submit a Cape Town Explorer gear or experience review.">
+  <meta name="author" content="Prosper Opara">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <p class="eyebrow">Cape Town Explorer Gear</p>
+      <h1>Product Review</h1>
+      <p class="subtitle">Share your field notes so other explorers can plan with confidence.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <form action="review.html" method="get" class="review-card" aria-describedby="required-note">
+      <p id="required-note" class="required-note"><span aria-hidden="true">*</span> Required fields</p>
+
+      <label for="product" class="field-label">Product Name <span aria-hidden="true">*</span></label>
+      <select id="product" name="product" required>
+        <option value="" disabled selected>Select a Product ...</option>
+      </select>
+
+      <fieldset class="rating-group">
+        <legend>Overall Rating <span aria-hidden="true">*</span></legend>
+        <div class="stars">
+          <label>
+            <input type="radio" name="rating" value="1" required>
+            <span aria-hidden="true">☆</span>
+            <span class="sr-only">1 star</span>
+          </label>
+          <label>
+            <input type="radio" name="rating" value="2" required>
+            <span aria-hidden="true">☆☆</span>
+            <span class="sr-only">2 stars</span>
+          </label>
+          <label>
+            <input type="radio" name="rating" value="3" required>
+            <span aria-hidden="true">☆☆☆</span>
+            <span class="sr-only">3 stars</span>
+          </label>
+          <label>
+            <input type="radio" name="rating" value="4" required>
+            <span aria-hidden="true">☆☆☆☆</span>
+            <span class="sr-only">4 stars</span>
+          </label>
+          <label>
+            <input type="radio" name="rating" value="5" required>
+            <span aria-hidden="true">☆☆☆☆☆</span>
+            <span class="sr-only">5 stars</span>
+          </label>
+        </div>
+      </fieldset>
+
+      <label for="installation" class="field-label">Date of Installation <span aria-hidden="true">*</span></label>
+      <input type="date" id="installation" name="installation" required>
+
+      <fieldset class="features-group">
+        <legend>Useful Features (check all that apply)</legend>
+        <label><input type="checkbox" id="feature-durability" name="features" value="durability"> Durability</label>
+        <label><input type="checkbox" id="feature-ease" name="features" value="ease-of-use"> Ease of Use</label>
+        <label><input type="checkbox" id="feature-performance" name="features" value="performance"> Performance</label>
+        <label><input type="checkbox" id="feature-design" name="features" value="design"> Design</label>
+      </fieldset>
+
+      <label for="review" class="field-label optional">Written Review <span>(Optional)</span></label>
+      <textarea id="review" name="review" rows="5" placeholder="Tell fellow travelers what stood out..."></textarea>
+
+      <label for="username" class="field-label optional">Your Name <span>(Optional)</span></label>
+      <input type="text" id="username" name="username" placeholder="e.g., Thando M.">
+
+      <input type="submit" value="Post Review" class="primary-btn">
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Prosper Opara | Cape Town Explorer</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = `Last Modification: ${document.lastModified}`;
+  </script>
+</body>
+</html>
