@@ -42,3 +42,10 @@ const STORAGE_KEY = 'ct-review-count';
 const currentCount = Number(localStorage.getItem(STORAGE_KEY) || 0) + 1;
 localStorage.setItem(STORAGE_KEY, currentCount);
 reviewCountEl.textContent = currentCount;
+
+const yearEl = document.getElementById('year');
+const lastModEl = document.getElementById('lastModified');
+if (yearEl && lastModEl) {
+  yearEl.textContent = new Date().getFullYear();
+  lastModEl.textContent = `Last Modification: ${document.lastModified}`;
+}

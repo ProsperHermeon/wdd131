@@ -17,3 +17,10 @@ products.forEach(product => {
   fragment.appendChild(option);
 });
 productSelect.appendChild(fragment);
+
+const yearEl = document.getElementById('year');
+const lastModEl = document.getElementById('lastModified');
+if (yearEl && lastModEl) {
+  yearEl.textContent = new Date().getFullYear();
+  lastModEl.textContent = `Last Modification: ${document.lastModified}`;
+}
