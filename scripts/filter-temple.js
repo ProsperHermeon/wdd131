@@ -79,7 +79,7 @@ const temples = [
 ];
 
 const gallery = document.getElementById("templeGallery");
-const navButtons = document.querySelectorAll("nav button");
+const navButtons = document.querySelectorAll("#filter-nav a");
 const hamburger = document.getElementById("hamburger");
 const nav = document.getElementById("filter-nav");
 
@@ -144,10 +144,11 @@ const applyFilter = (filter) => {
   renderTemples(filtered);
 };
 
-navButtons.forEach((button) => {
-  button.addEventListener("click", () => {
-    setActiveButton(button);
-    applyFilter(button.dataset.filter);
+navButtons.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    setActiveButton(link);
+    applyFilter(link.dataset.filter);
 
     if (nav.classList.contains("active")) {
       nav.classList.remove("active");
