@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cape Town Explorer | Plan Your Trip</title>
+  <meta name="description" content="Submit trip preferences for a custom Cape Town Explorer itinerary and download planning tips.">
+  <meta name="author" content="Prosper Opara">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/project.css">
+  <link rel="stylesheet" href="styles/project-large.css">
+  <script defer src="scripts/project.js"></script>
+</head>
+<body>
+  <header class="site-header compact">
+    <div class="container header-grid">
+      <div>
+        <p class="eyebrow">Cape Town Explorer</p>
+        <h1>Plan Your Trip</h1>
+        <p class="lead">Tell us how you like to explore and we’ll send a personalized set of trails, tables, and tunes.</p>
+      </div>
+      <figure class="hero-image">
+        <img src="images/capetown3.jpg" alt="Traveler planning with a map" width="640" height="420" loading="eager">
+      </figure>
+    </div>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="page2.html">Neighborhoods</a>
+      <a href="page3.html" aria-current="page">Plan</a>
+      <a href="references.html">References</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container plan-grid">
+        <form class="planning-form" method="post" action="https://httpbin.org/post" aria-describedby="form-note">
+          <h2>Trip Preferences</h2>
+          <p id="form-note">Required fields are marked with <span aria-hidden="true">*</span></p>
+
+          <label for="firstName">First Name <span aria-hidden="true">*</span></label>
+          <input type="text" id="firstName" name="firstName" required autocomplete="given-name">
+
+          <label for="email">Email <span aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" required autocomplete="email">
+
+          <label for="arrival">Arrival Date <span aria-hidden="true">*</span></label>
+          <input type="date" id="arrival" name="arrival" required>
+
+          <label for="party">Travel Party Size <span aria-hidden="true">*</span></label>
+          <input type="number" id="party" name="party" min="1" max="12" required>
+
+          <fieldset>
+            <legend>Interests (check all that apply)</legend>
+            <div class="checkbox-option"><input type="checkbox" id="interest-hiking" name="interests" value="hiking"><label for="interest-hiking">Hiking</label></div>
+            <div class="checkbox-option"><input type="checkbox" id="interest-food" name="interests" value="food"><label for="interest-food">Food & Wine</label></div>
+            <div class="checkbox-option"><input type="checkbox" id="interest-art" name="interests" value="art"><label for="interest-art">Art & Design</label></div>
+            <div class="checkbox-option"><input type="checkbox" id="interest-wellness" name="interests" value="wellness"><label for="interest-wellness">Wellness</label></div>
+          </fieldset>
+
+          <label for="budget">Approximate daily budget (USD)</label>
+          <select id="budget" name="budget">
+            <option value="under150">Under $150</option>
+            <option value="150-300">$150 - $300</option>
+            <option value="over300">$300+</option>
+          </select>
+
+          <label for="message">Anything we should know?</label>
+          <textarea id="message" name="message" rows="5" placeholder="Dream hikes, dietary needs, playlists…"></textarea>
+
+          <label class="toggle">
+            <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+            <span>Send Cape Town Explorer newsletter</span>
+          </label>
+
+          <button type="submit" class="btn primary">Submit Preferences</button>
+        </form>
+
+        <div class="plan-sidebar">
+          <h2>What You’ll Receive</h2>
+          <ul>
+            <li>48-hour and 5-day itinerary templates tuned to your mood.</li>
+            <li>Dining reservations cheat sheet with seasonal menus.</li>
+            <li>Voice note walking tours for Bree Street and Bo-Kaap.</li>
+          </ul>
+          <p class="note">Submissions land in our inbox and you’ll get a personalized response within 48 hours.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Prosper Opara | Cape Town Explorer</p>
+      <p><a href="references.html">Source & Image Credits</a> | <span id="lastModified"></span></p>
+    </div>
+  </footer>
+</body>
+</html>

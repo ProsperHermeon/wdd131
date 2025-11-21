@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cape Town Explorer | Neighborhood Stories</title>
+  <meta name="description" content="Dive into Cape Town neighborhoods with food, art, and seaside rituals plus a custom micro-itinerary builder.">
+  <meta name="author" content="Prosper Opara">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/project.css">
+  <link rel="stylesheet" href="styles/project-large.css">
+  <script defer src="scripts/project.js"></script>
+</head>
+<body>
+  <header class="site-header compact">
+    <div class="container header-grid">
+      <div>
+        <p class="eyebrow">Cape Town Explorer</p>
+        <h1>Neighborhood Stories</h1>
+        <p class="lead">Pair seaside strolls with gallery hops, spice markets, and late-night vinyl. These districts reward slow wandering.</p>
+      </div>
+      <figure class="hero-image">
+        <img src="images/capetown4.jpg" alt="Colorful homes in Bo-Kaap" width="640" height="420" loading="eager">
+      </figure>
+    </div>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="page2.html" aria-current="page">Neighborhoods</a>
+      <a href="page3.html">Plan</a>
+      <a href="references.html">References</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section" id="hoods">
+      <div class="container neighborhood-grid">
+        <article>
+          <img src="images/capetown5.jpg" alt="Bree Street cafes" loading="lazy" width="500" height="340">
+          <h2>Bree Street & De Waterkant</h2>
+          <p>Morning cortados at Origin Coffee, pastel de nata from Jason Bakery, and sunset cocktails on The Silo rooftop. The cobbled lanes of De Waterkant glow pastel at dusk.</p>
+        </article>
+        <article>
+          <img src="images/capetown6.jpg" alt="Muizenberg surfer" loading="lazy" width="500" height="340">
+          <h2>Muizenberg & Kalk Bay</h2>
+          <p>Surf gentle rollers, hunt vintage vinyl at Kalk Bay Books, then choose snoek tacos right on the harbor. Finish with soft serve from Ice Café.</p>
+        </article>
+        <article>
+          <img src="images/capetown7.jpg" alt="Winelands vineyard" loading="lazy" width="500" height="340">
+          <h2>Constantia Winelands</h2>
+          <p>Cycle between estates, sample cool-climate chardonnay, and book a long-table lunch under ancient oaks at Groot Constantia.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section alt" id="itinerary">
+      <div class="container grid-two">
+        <div>
+          <h2>Micro-Itinerary Builder</h2>
+          <p>Choose your vibe and time of day. We’ll stitch together a few thoughtful moves.</p>
+          <form id="planForm" class="plan-form">
+            <label for="mood">Mood</label>
+            <select id="mood" name="mood">
+              <option value="adventure">Adventure</option>
+              <option value="culture">Culture</option>
+              <option value="easy">Easygoing</option>
+            </select>
+            <label for="daypart">Time of Day</label>
+            <select id="daypart" name="daypart">
+              <option value="morning">Morning</option>
+              <option value="afternoon">Afternoon</option>
+              <option value="evening">Evening</option>
+            </select>
+            <button type="submit" class="btn primary">Generate Plan</button>
+          </form>
+          <div id="planResult" class="plan-result" aria-live="polite"></div>
+        </div>
+        <figure>
+          <img src="images/capetown8.jpg" alt="Friends cycling through the city" loading="lazy" width="600" height="420">
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Prosper Opara | Cape Town Explorer</p>
+      <p><a href="references.html">Source & Image Credits</a> | <span id="lastModified"></span></p>
+    </div>
+  </footer>
+</body>
+</html>

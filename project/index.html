@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cape Town Explorer | Immersive Experiences</title>
+  <meta name="description" content="Cape Town Explorer curates immersive itineraries, local favorites, and planning tools for exploring the Mother City.">
+  <meta name="author" content="Prosper Opara">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/project.css">
+  <link rel="stylesheet" href="styles/project-large.css">
+  <script defer src="scripts/project.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-grid">
+      <div>
+        <p class="eyebrow">Cape Town Explorer</p>
+        <h1>Plan Boldly. Wander Deeply.</h1>
+        <p class="lead">From sunrise hikes to twilight tastings, we curate Cape Town experiences that balance culture, cuisine, and coastline magic.</p>
+        <div class="header-actions">
+          <a class="btn primary" href="#discover">Discover Experiences</a>
+          <a class="btn secondary" href="page3.html">Plan Your Trip</a>
+        </div>
+        <p class="save-counter">Wishlist saves: <span id="wishlistCount">0</span></p>
+      </div>
+      <figure class="hero-image">
+        <img src="images/capetown1.jpg" alt="Sunrise view over Cape Town" width="640" height="480" loading="eager">
+      </figure>
+    </div>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="page2.html">Neighborhoods</a>
+      <a href="page3.html">Plan</a>
+      <a href="references.html">References</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section" id="discover">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Curated Experiences</h2>
+          <p>Tap into mood-based recommendations. Save favorites to build your custom itinerary.</p>
+        </div>
+        <div class="filter-bar" role="toolbar" aria-label="Experience filters">
+          <button class="chip active" data-filter="all">All</button>
+          <button class="chip" data-filter="adventure">Adventure</button>
+          <button class="chip" data-filter="culture">Culture</button>
+          <button class="chip" data-filter="food">Food & Wine</button>
+        </div>
+        <div class="experience-grid" id="experienceGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section alt" id="insider">
+      <div class="container grid-two">
+        <div>
+          <h2>Insider Rituals</h2>
+          <ul class="rituals">
+            <li><strong>Golden Hour Dip:</strong> locals end workdays with a plunge at Clifton 2nd Beach no matter the season.</li>
+            <li><strong>First Thursday Art Hop:</strong> explore Cape Town galleries and street food every first Thursday night.</li>
+            <li><strong>Bree Street Coffee Crawl:</strong> pair locally roasted beans with pastel de nata pastries.</li>
+          </ul>
+        </div>
+        <figure>
+          <img src="images/capetown2.jpg" alt="Friends sharing sunset at Signal Hill" loading="lazy" width="600" height="420">
+        </figure>
+      </div>
+    </section>
+
+    <section class="section" id="weather">
+      <div class="container grid-two">
+        <figure>
+          <img src="images/capetown3.jpg" alt="Table Mountain with clouds" loading="lazy" width="600" height="420">
+        </figure>
+        <div>
+          <h2>Weather-Ready Packing</h2>
+          <p>Cape Town can host four seasons in a day. Use our quick check to adapt on the fly.</p>
+          <form class="weather-form" id="weatherForm">
+            <label for="season">Season you're visiting</label>
+            <select id="season" name="season">
+              <option value="summer">Summer (Dec-Feb)</option>
+              <option value="autumn">Autumn (Mar-May)</option>
+              <option value="winter">Winter (Jun-Aug)</option>
+              <option value="spring">Spring (Sep-Nov)</option>
+            </select>
+            <button type="submit" class="btn primary">Get Packing Tip</button>
+          </form>
+          <p class="weather-tip" id="weatherTip" aria-live="polite"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Prosper Opara | Cape Town Explorer</p>
+      <p><a href="references.html">Source & Image Credits</a> | <span id="lastModified"></span></p>
+    </div>
+  </footer>
+</body>
+</html>

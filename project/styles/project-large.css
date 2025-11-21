@@ -1,0 +1,18 @@
+@media (min-width: 1100px) {
+  .header-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+
+  .experience-card {
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: center;
+  }
+
+  .experience-card img {
+    order: 2;
+  }
+
+  .experience-card .card-meta {
+    order: 1;
+  }
+}

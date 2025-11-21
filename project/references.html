@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cape Town Explorer | References</title>
+  <meta name="description" content="Source and attribution list for Cape Town Explorer project.">
+  <meta name="author" content="Prosper Opara">
+  <link rel="stylesheet" href="styles/project.css">
+  <link rel="stylesheet" href="styles/project-large.css">
+  <script defer src="scripts/project.js"></script>
+</head>
+<body class="references">
+  <header class="site-header compact">
+    <div class="container">
+      <h1>References & Credits</h1>
+      <p class="lead">Content written by Prosper Opara. Imagery captured from BYU-I provided assets.</p>
+    </div>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="page2.html">Neighborhoods</a>
+      <a href="page3.html">Plan</a>
+      <a href="references.html" aria-current="page">References</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <h2>Sources</h2>
+        <ul class="reference-list">
+          <li>Cape Town Tourism Board. <em>Seasonal Travel Tips</em>. Retrieved February 2024.</li>
+          <li>South African National Parks. <em>Table Mountain Trail Updates</em>. Retrieved February 2024.</li>
+          <li>Western Cape Government. <em>Public Transport & Safety Data</em>. Retrieved February 2024.</li>
+          <li>All photographs supplied in the course image pack (“capetown1.jpg – capetown8.jpg”).</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; <span id="year"></span> Prosper Opara | Cape Town Explorer</p>
+      <p><span id="lastModified"></span></p>
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = `Last Modification: ${document.lastModified}`;
+  </script>
+</body>
+</html>
